@@ -40,16 +40,24 @@ section {
   padding-left: 1.5rem;
   padding-right: 1.5em;
 }
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 h3 {
-  color: var(--dark);
+  /* color: var(--dark); */
+  color: #fff;
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 h4 {
-  color: var(--grey);
+  /* color: var(--grey); */
+  color: #fff;
   font-size: 0.875rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -67,7 +75,8 @@ h4 {
 
 .greeting .title,
 .greeting .title input {
-  color: var(--dark);
+  /* color: var(--dark); */
+  color: #ffff;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -77,27 +86,29 @@ h4 {
   width: 100%;
   font-size: 1.125rem;
   padding: 1rem 1.5rem;
-  color: var(--dark);
-  background-color: #fff;
+  /* color: var(--dark); */
+  background-color: #bbbb;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   margin-bottom: 1.5rem;
 }
-
+/* ::placeholder {
+  color: #fff;
+  opacity: 1;
+} */
 .create-todo .options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin-bottom: 1.5rem;
 }
-
 .create-todo .options label {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  background-color: #fff;
+  background-color: #cccc;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   cursor: pointer;
@@ -183,7 +194,9 @@ input:checked ~ .bubble::after {
   box-shadow: var(--shadow);
   margin-bottom: 1rem;
 }
-
+.title {
+  margin-bottom: -20px;
+}
 .todo-item label {
   display: block;
   margin-right: 1rem;
@@ -229,4 +242,24 @@ input:checked ~ .bubble::after {
 .todo-item.done .todo-content input {
   text-decoration: line-through;
   color: var(--grey);
+}
+@media screen and (max-width: 1440px) {
+  body {
+    background-image: url("boom2.jpg");
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    background-image: url("boom.jpg");
+  }
+}
+@media screen and (max-width: 380px) {
+  .todo-item .actions .delete {
+    padding: 5px;
+    margin-left: -20px;
+    font-size: 12px;
+  }
+  .todo-item label {
+    margin-right: 5px;
+  }
 }
